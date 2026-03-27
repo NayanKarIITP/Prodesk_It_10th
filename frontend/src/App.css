@@ -1,0 +1,36 @@
+:root {
+  --accent: #6366f1;
+  --glass: rgba(255, 255, 255, 0.9);
+}
+
+body { margin: 0; font-family: 'Inter', sans-serif; background: #f1f5f9; color: #1e293b; }
+.app-container { max-width: 1300px; margin: 0 auto; padding: 20px; }
+
+.glass-header { display: flex; justify-content: space-between; align-items: center; background: var(--glass); padding: 20px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.refresh-pill { background: white; border: 1px solid #ddd; padding: 8px 15px; border-radius: 20px; cursor: pointer; }
+
+.main-layout { display: grid; grid-template-columns: 320px 1fr; gap: 30px; }
+.glass-card { background: white; padding: 20px; border-radius: 20px; margin-bottom: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.stack-form { display: flex; flex-direction: column; gap: 12px; }
+
+input, textarea, select { padding: 12px; border: 1px solid #e2e8f0; border-radius: 10px; }
+.btn-primary { background: var(--accent); color: white; border: none; padding: 12px; border-radius: 10px; cursor: pointer; font-weight: bold; }
+.btn-secondary { background: #f8fafc; color: var(--accent); border: 2px solid var(--accent); padding: 10px; border-radius: 10px; cursor: pointer; font-weight: bold; }
+
+.trending-bar { background: white; padding: 20px; border-radius: 20px; margin-bottom: 30px; }
+.trending-scroll { display: flex; gap: 15px; overflow-x: auto; padding-top: 10px; }
+.mini-trend-card { background: #f1f5f9; padding: 12px; border-radius: 12px; min-width: 200px; }
+
+.posts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
+.post-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; }
+.post-card:hover { transform: translateY(-5px); }
+
+.img-wrapper { position: relative; width: 100%; height: 200px; }
+.img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+
+.delete-btn { position: absolute; top: 10px; right: 10px; background: white; border: none; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; opacity: 0; transition: 0.3s; }
+.post-card:hover .delete-btn { opacity: 1; }
+.delete-btn:hover { background: #fee2e2; }
+
+.post-details { padding: 20px; }
+.author-pill { background: #eef2ff; color: var(--accent); padding: 4px 10px; border-radius: 6px; font-weight: bold; font-size: 0.8rem; }
