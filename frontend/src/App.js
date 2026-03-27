@@ -14,7 +14,7 @@ function App() {
   const [isUploading, setIsUploading] = useState(false);
 
   const fileInputRef = useRef(null);
-  const API = "http://localhost:5000/api";
+  const API = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 
   const fetchUsers = useCallback(async () => {
     try {
@@ -93,7 +93,7 @@ function App() {
   return (
     <div className="app-container">
       <header className="glass-header">
-        <h1>✨ MERN <span>Cloud</span> Blog</h1>
+        <h1>MERN <span>Cloud</span> Blog</h1>
         <button onClick={refreshData} className="refresh-pill">🔄 Sync Feed</button>
       </header>
 
