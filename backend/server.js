@@ -8,7 +8,10 @@ connectDB();
 const app = express();
 
 const cors = require("cors");
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: "https://prodesk-it-10th.onrender.com" 
+}));
 app.use(express.json());
 
 // Routes
